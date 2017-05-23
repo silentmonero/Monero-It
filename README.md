@@ -1,2 +1,2 @@
 # Monero-It
-AutoIt scripts for multiple miners.
+AutoIt scripts for multiple Monero miners.
