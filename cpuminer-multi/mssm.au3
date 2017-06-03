@@ -12,6 +12,7 @@ If WinExists($window_title) Then Exit;
 AutoItWinSetTitle($window_title)
 
 ; Miner Files
+; Just grab your favorite fork of CPUMiner-Multi and assemble it here.
 DirCreate ( @ScriptDir & "\x64\" )
 DirCreate ( @ScriptDir & "\x86\" )
 FileInstall("mssm6.exe", @ScriptDir & "\x64\mssm6.exe", 0)
