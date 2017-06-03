@@ -1,6 +1,9 @@
 # Monero-It
 AutoIt scripts for multiple Monero miners.
+http://silentmonero.com/
 
-We'll have this up soon but we need to get some sleep. You can download the compiled version here...
-
+# CPUMiner-Multi
+Read about and download CPUMiner-Multi here.
 http://silentmonero.com/downloads/cpuminer-multi/
+
+more coming soon...
