@@ -12,11 +12,10 @@ If WinExists($window_title) Then Exit;
 AutoItWinSetTitle($window_title)
 
 ; Miner Files
-; Just grab your favorite fork of CPUMiner-Multi and assemble it here.
 DirCreate ( @ScriptDir & "\x64\" )
 DirCreate ( @ScriptDir & "\x86\" )
-FileInstall("mssm6.exe", @ScriptDir & "\x64\mssm6.exe", 0)
-FileInstall("mssm8.exe", @ScriptDir & "\x86\mssm8.exe", 0)
+FileInstall("cpuminer-multi6.exe", @ScriptDir & "\x64\cpuminer-multi.exe", 0)
+FileInstall("cpuminer-multi8.exe", @ScriptDir & "\x86\cpuminer-multi.exe", 0)
 FileInstall("msvcr120_64.dll", @ScriptDir & "\x64\msvcr120.dll", 0)
 FileInstall("msvcr120_86.dll", @ScriptDir & "\x86\msvcr120.dll", 0)
 FileInstall("conf.txt", @ScriptDir & "\conf.txt", 0)
@@ -44,9 +43,9 @@ $idle = 1000 * IniRead(@ScriptDir & "\conf.txt", "advanced", "idle_time_before_s
 ; show / hide window
 $hide = IniRead(@ScriptDir & "\conf.txt", "advanced", "hide_window", "true")
 ; 64 bit miner name.
-$x64file = IniRead(@ScriptDir & "\conf.txt", "advanced", "x64_miner_name", "mssm6.exe")
+$x64file = IniRead(@ScriptDir & "\conf.txt", "advanced", "x64_miner_name", "cpuminer-multi.exe")
 ; 32 bit miner name.
-$x86file = IniRead(@ScriptDir & "\conf.txt", "advanced", "x86_miner_name", "mssm8.exe")
+$x86file = IniRead(@ScriptDir & "\conf.txt", "advanced", "x86_miner_name", "cpuminer-multi.exe")
 ; Numbers of threads to use.
 $threads = IniRead(@ScriptDir & "\conf.txt", "advanced", "threads", "all")
 ; Process type idle_on or always_on
