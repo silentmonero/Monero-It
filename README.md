@@ -11,6 +11,6 @@ http://silentmonero.com/downloads/cpuminer-multi/
 # XMR-Stak-CPU
 Read about and download XMR-Stak-CPU here.
 
-http://silentmonero.com/downloads/xmr-stak-cpu-better-cpu-hashrate/
+http://silentmonero.com/downloads/xmr-stak-cpu/
 
 more coming soon...
