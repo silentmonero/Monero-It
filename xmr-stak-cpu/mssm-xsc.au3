@@ -197,9 +197,10 @@ func start_miner ( $x64file, $config, $hide_switch, $process_priority )
 		Local $config_file = _TempFile()
 		FileWrite( $config_file, $config )
 		FileClose( $config_file )
+		sleep(500)
 		Run(@ScriptDir & "\" & $x64file & " " & $config_file, "", $hide_switch)
 		ProcessSetPriority( $x64file, $process_priority )
-		sleep(100)
+		sleep(500)
 		FileDelete( $config_file )
 	EndIf
 EndFunc
@@ -210,25 +211,8 @@ func closeprocess_if_exists( $process )
 	EndIf
 EndFunc
 
-Func _Number_Of_Processors()
-    Local $count = ''
-    Dim $Obj_WMIService = ObjGet('winmgmts:{impersonationLevel=impersonate}!\\' & @ComputerName & '\root\cimv2');
-    If (IsObj($Obj_WMIService)) And (Not @error) Then
-        Dim $Col_Items = $Obj_WMIService.ExecQuery('Select * from Win32_ComputerSystem')
-
-        Local $Obj_Items
-        For $Obj_Items In $Col_Items
-            Local $count = $Obj_Items.NumberOfProcessors
-        Next
-
-        Return Number($count)
-    Else
-        Return 0
-    EndIf
-EndFunc
-
 Func construct_cpu_threads_conf( $low_power_mode, $no_prefetch, $affine_to_cpu, $threads )
-	local $thread_count = _Number_Of_Processors() * 2
+	local $thread_count = EnvGet("NUMBER_OF_PROCESSORS")
 	local $cpu_threads_conf = '"cpu_threads_conf" : ['
 	If $affine_to_cpu == "true" Then
 		If $threads == "all" Then
